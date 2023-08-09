@@ -1,0 +1,80 @@
+.container-about.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 7rem;
+}
+
+.container-about.about img {
+  width: 60%;
+  height: auto;
+}
+
+.container-about.about h2 {
+  font-size: 1.5rem;
+  color: var(--logo-star);
+  font-weight: bold;
+  font-family: "Raleway";
+}
+
+.container-about.about h2 b {
+  color: var(--logo-light);
+  display: block;
+}
+
+.container-about.about p {
+  color: var(--logo-medium);
+  font-size: 1.125rem;
+  font-family: "Raleway";
+}
+
+.container-about.about .about-social-network {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  margin-top: 3rem;
+}
+
+.container-about.about .about-social-network .about-social-network-item {
+  background-color: var(--logo-medium);
+  padding: 0.4rem;
+  border-radius: 200px;
+  height: 2rem;
+  width: 2rem;
+  color: var(--main-raven);
+  cursor: pointer;
+}
+
+.container-about.about .about-social-network .about-social-network-item:hover {
+  background-color: var(--logo-star);
+}
+
+@media screen and (max-width: 480px) {
+  .container-about.about {
+    padding: 2rem 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-about.about {
+    flex-direction: row;
+    gap: 4.875rem;
+  }
+
+  .container-about.about img {
+    width: 45%;
+    max-width: 30rem;
+    height: auto;
+  }
+
+  .container-about.about h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-about.about img {
+    min-width: 30rem;
+  }
+}

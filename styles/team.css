@@ -1,0 +1,169 @@
+.team-container.team {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.team-container.team h2 {
+  font-size: 1.25rem;
+  color: var(--logo-dark_sun);
+  font-weight: bold;
+  font-family: "Raleway";
+}
+.team-container.team h2 b {
+  color: var(--logo-light);
+}
+
+.team-container.team .team-container-slider {
+  width: 70vw;
+  padding: 2.25rem 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+}
+
+.team-container-slider-motion {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.team-container.team .team-container-slider .team-container-card {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+}
+
+.team-container.team
+  .team-container-slider
+  .team-container-card
+  .team-container-card-img {
+    width: 100%;
+  height: auto;
+  opacity: 0.5;
+  filter: contrast(0.8);
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.team-container.team
+  .team-container-slider
+  .team-container-card:hover
+  > .team-container-card-img {
+  
+
+  opacity: 1;
+  filter: none;
+  transform: scale(1.1);
+  pointer-events: none;
+}
+
+.team-container.team
+  .team-container-slider
+  .team-container-card
+  .team-container-card-img
+  img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3125rem;
+}
+
+.team-container.team .team-container-slider .team-container-card h5,
+.team-container.team .team-container-slider .team-container-card h6 {
+  margin: 0;
+}
+
+.team-container.team .team-container-slider .team-container-card:hover > h5 {
+  color: var(--logo-star);
+}
+
+.team-container.team .team-container-slider .team-container-card h5 {
+  color: var(--logo-light);
+  margin-top: 1rem;
+}
+
+.team-container.team .team-container-slider .team-container-card h6 {
+  color: var(--logo-medium);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.team-container.team .team-container-slider-arrow {
+  cursor: pointer;
+  color: var(--logo-star);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.team-container.team .team-container-slider-arrow:hover {
+  opacity: 0.5;
+}
+
+.team-container.team .team-container-slider-arrow:active {
+  transform: scale(0.95);
+}
+
+.team-container.team .team-container-slider-back {
+  left: 5rem;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+}
+
+.team-container.team .team-container-slider-next {
+  right: 5rem;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .team-container.team h2 {
+    font-size: 1.5rem;
+  }
+  /* .team-container.team .team-container-slider .team-container-card {
+    width: fit-content;
+  } */
+
+  .team-container.team .team-container-slider .team-container-card {
+    min-width: fit-content;
+  }
+
+  .team-container-slider-motion {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    gap: 2.25rem;
+  }
+
+  .team-container.team
+    .team-container-slider
+    .team-container-card
+    .team-container-card-img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .team-container.team
+  .team-container-slider
+  .team-container-card
+  .team-container-card-img
+  img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3125rem;
+}
+}

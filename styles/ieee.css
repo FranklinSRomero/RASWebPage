@@ -1,0 +1,84 @@
+.ieee-info-container {
+  text-align: center;
+  background-image: url("../public/heroieee.jpg");
+  background-attachment: fixed;
+  padding: 7.125rem 3rem;
+  position: relative;
+  z-index: 1;
+  background-position: right 0px bottom 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ieee-info-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.85);
+  z-index: -1;
+}
+
+.ieee-info-container .explore-more {
+  color: var(--logo-dark_sun);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.ieee-info-container h2,
+.ieee-info-container p,
+.ieee-info-container button {
+  color: var(--logo-light);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 180%;
+  padding: 0;
+  margin: 0;
+}
+
+.ieee-info-container p {
+  font-weight: 400;
+}
+
+.ieee-info-container h2 {
+  font-size: 2rem;
+}
+
+.ieee-info-container button {
+  background-color: var(--logo-dark_sun);
+  padding: 0.75rem 0.75rem;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  margin-top: 1.4375rem;
+}
+
+.ieee-info-container button:hover {
+  background-color: var(--logo-star);
+}
+
+.ieee-info-container button:active {
+  transform: scale(0.95);
+}
+
+.ieee-info-container button img {
+  width: 1.2rem;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .ieee-info-container {
+    padding: 7.125rem 10.5rem;
+    background-position: left 0px bottom 0px;
+  }
+
+  .ieee-info-container p {
+    font-weight: bold;
+  }
+
+  .ieee-info-container h2 {
+    font-size: 3rem;
+  }
+}

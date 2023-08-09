@@ -1,0 +1,291 @@
+.container-authuser h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--logo-light);
+}
+
+.container-authuser form h1 {
+  font-family: "Nunito";
+  font-weight: normal;
+}
+
+.container-authuser p {
+  font-size: 1.375rem;
+  margin: 1.375rem 0 1.75rem;
+  color: var(--logo-light);
+}
+
+.container-authuser a,
+.container-authuser span {
+  font-size: 1.5rem;
+  color: var(--logo-medium);
+  font-weight: lighter;
+  text-decoration: none;
+  margin-bottom: 2.8rem;
+}
+
+.container-authuser a:hover {
+  color: var(--logo-star);
+}
+
+.change-form-movile span {
+  color: var(--logo-star);
+  cursor: pointer;
+}
+
+.change-form-movile span:hover {
+  color: var(--logo-medium);
+}
+
+.container-authuser {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-raven {
+  background-color: var(--main-raven);
+}
+
+/********  ACTIVATE FOR MOVILE DEVICES ********/
+
+.container-authuser .form-container {
+  height: inherit;
+}
+
+.container-authuser .form-container form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3.5rem;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container-authuser .form-container form .inputs-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-authuser .form-container input {
+  color: var(--logo-medium);
+  border: 1px solid var(--logo-star);
+  padding: 1.25rem 0 1.25rem 1.875rem;
+  margin: 0 0 1.375rem 0;
+  width: 100%;
+}
+
+.container-authuser button {
+  flex-shrink: 1;
+  background-color: var(--logo-star);
+  border: none;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1.125rem 3.125rem;
+  margin: 0 0 1.375rem 0;
+  cursor: pointer;
+}
+
+.container-authuser button:active {
+  transform: scale(0.95);
+}
+
+.container-authuser button:focus {
+  outline: none;
+}
+
+/* SHOW THE OTHER FORM */
+
+.container-authuser.right-panel-movile-active .sign-in-container {
+  transform: translateY(-100%);
+  border: none;
+}
+.container-authuser.right-panel-movile-active .sign-up-container {
+  transform: translateY(-100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/** FOR CLOSE LOGIN ONLY **/
+.container-authuser .close img {
+  height: 1.875rem;
+  width: 1.875rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.container-authuser .close img:hover {
+  filter: brightness(0.8);
+}
+
+.container-authuser .close img:active {
+  transform: scale(0.95);
+}
+
+@media screen and (min-width: 768px) {
+  .container-authuser.right-panel-movile-active .sign-in-container {
+    transform: translateY(0%);
+  }
+  .container-authuser.right-panel-movile-active .sign-up-container {
+    transform: translateY(0%);
+  }
+
+  /*  FOR TABLET DEVICES */
+  .container-authuser .change-form-movile {
+    display: none;
+  }
+
+  .container-authuser .form-container form {
+    padding: 0 5rem;
+    text-align: left;
+  }
+
+  .container-authuser .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .container-authuser .sign-in-container {
+    left: 0;
+    width: 55%;
+    z-index: 2;
+    border-right: 0.25rem solid var(--logo-star);
+  }
+
+  .container-authuser .sign-up-container {
+    left: 0;
+    width: 55%;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .container-authuser .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 55%;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+
+  .container-authuser .overlay {
+    background-image: url("../public/login_sid_back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    left: -122.2%;
+    height: 100%;
+    width: 222.2%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .container-authuser .overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5rem;
+    height: 100%;
+    width: 45%;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .container-authuser .overlay-right {
+    right: 0;
+    transform: translateX(0);
+  }
+
+  .container-authuser .overlay-left {
+    transform: translateX(-20%); /*Solo para efecto de aparecer por el lado*/
+    left: 0;
+  }
+
+  /* ANIMATION*/
+
+  .container-authuser.right-panel-active .sign-in-container {
+    transform: translateX(81.818181%);
+    border: none;
+  }
+
+  .container-authuser.right-panel-active .overlay-container {
+    transform: translateX(-122.2%); /**Distancia left del overlay*/
+  }
+
+  .container-authuser.right-panel-active .sign-up-container {
+    transform: translateX(81.818181%);
+    opacity: 1;
+    z-index: 5;
+    border-left: 0.25rem solid var(--logo-star);
+  }
+
+  .container-authuser.right-panel-active .overlay {
+    transform: translateX(55%);
+  }
+
+  .container-authuser.right-panel-active .overlay-left {
+    /*Solo para efecto de aparecer por el lado*/
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-authuser .form-container form {
+    padding: 0 7.5rem;
+  }
+
+  .container-authuser .sign-in-container {
+    width: 68%;
+  }
+
+  .container-authuser .sign-up-container {
+    width: 68%;
+  }
+
+  .container-authuser .overlay-container {
+    left: 68%;
+    width: 32%;
+  }
+
+  .container-authuser .overlay {
+    left: -212.5%;
+    width: 312.5%;
+  }
+
+  .container-authuser .overlay-panel {
+    width: 32%;
+  }
+
+  /* ANIMATION*/
+
+  .container-authuser.right-panel-active .sign-in-container {
+    transform: translateX(47.056%);
+  }
+
+  .container-authuser.right-panel-active .overlay-container {
+    transform: translateX(-212.5%); /**Distancia left del overlay linea 164*/
+  }
+
+  .container-authuser.right-panel-active .sign-up-container {
+    transform: translateX(47.056%);
+  }
+
+  .container-authuser.right-panel-active .overlay {
+    transform: translateX(68%);
+  }
+}

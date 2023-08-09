@@ -1,0 +1,129 @@
+.footer-container {
+  background-color: var(--main-raven);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-container .makers {
+  background-color: var(--main-medium);
+  border-top: 1px solid var(--logo-star);
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--logo-medium);
+  padding: 1rem;
+}
+
+.footer-container .footer-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3rem 3rem;
+}
+
+.footer-container .footer-items-container .footer-items-section {
+  font-size: 1rem;
+  font-family: "Raleway";
+  min-width: 130px;
+}
+
+.footer-container .footer-items-container .footer-items-section h5 {
+  color: var(--logo-star);
+  margin-bottom: 3rem;
+}
+
+.footer-container .footer-items-container .footer-items-section .footer-item,
+.footer-container .copyright {
+  padding: 0;
+  margin: 0;
+  padding: 0.5rem 0;
+  color: var(--logo-medium);
+}
+
+.footer-container .footer-items-container .footer-items-section .footer-item a {
+  text-decoration: none;
+  color: var(--logo-medium);
+}
+
+.footer-container
+  .footer-items-container
+  .footer-items-section
+  .footer-item
+  a:hover {
+  color: var(--logo-star);
+}
+
+.footer-container
+  .footer-items-container
+  .footer-items-section
+  .form-subscribe
+  .input-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-ravener);
+  border-radius: 0.3125rem;
+  padding: 1rem;
+}
+
+.footer-container
+  .footer-items-container
+  .footer-items-section
+  .form-subscribe
+  .input-subscribe
+  input[type="email"] {
+  background-color: var(--main-ravener);
+  border: none;
+  margin-top: 0.3125rem;
+  color: var(--logo-medium);
+}
+
+.footer-container
+  .footer-items-container
+  .footer-items-section
+  .form-subscribe
+  .input-subscribe
+  input[type="email"]:focus {
+  outline: none;
+}
+
+.footer-container
+  .footer-items-container
+  .footer-items-section
+  .form-subscribe
+  .input-subscribe
+  img {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.footer-container
+  .footer-items-container
+  .footer-items-section
+  .form-subscribe
+  .input-subscribe
+  img:active {
+  transform: scale(0.8);
+}
+
+.footer-container
+  .footer-items-container
+  .footer-items-section
+  .form-subscribe
+  .input-subscribe
+  img:hover {
+  filter: brightness(0.7);
+}
+
+.footer-container .copyright {
+  text-align: right;
+  margin-right: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container .footer-items-container {
+    justify-content: space-between;
+    padding: 3rem 8rem;
+  }
+}

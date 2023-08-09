@@ -1,0 +1,166 @@
+.container-hero-image.hero-image {
+  position: relative;
+  width: 100vw;
+}
+
+.container-hero-image.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+.blur-1 {
+  filter: blur(1.3px);
+}
+
+.container-hero-image.hero-image .presentation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7rem 0 3rem;
+}
+
+.container-hero-image.hero-image .presentation-container .presentation-content {
+  width: 80%;
+}
+
+.container-hero-image.hero-image
+  .presentation-container
+  .presentation-content
+  h1,
+.container-hero-image.hero-image
+  .presentation-container
+  .presentation-content
+  p {
+  color: var(--logo-light);
+  font-weight: normal;
+  font-family: "Nunito";
+  font-size: 2.575rem;
+}
+
+.container-hero-image.hero-image
+  .presentation-container
+  .presentation-content
+  p {
+  color: var(--logo-medium);
+  font-size: 1.535rem;
+}
+
+.container-hero-image.hero-image
+  .presentation-container
+  .presentation-content
+  button {
+  background-color: var(--logo-star);
+  color: var(--logo-light);
+  font-size: 1.325rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 1rem 1.35rem;
+  cursor: pointer;
+}
+
+.container-hero-image.hero-image
+  .presentation-container
+  .presentation-content
+  button:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 480px) {
+  .container-hero-image.hero-image
+    .presentation-container
+    .presentation-content
+    h1 {
+    font-size: 2rem;
+  }
+  .container-hero-image.hero-image
+    .presentation-container
+    .presentation-content
+    p {
+    font-size: 1.3rem;
+  }
+
+  .container-hero-image.hero-image .presentation-container {
+    padding: 0 1rem 0 1rem;
+  }
+
+  .container-hero-image.hero-image
+    .presentation-container
+    .presentation-content
+    button {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-hero-image.hero-image img {
+    width: 60%;
+  }
+  .container-hero-image.hero-image .presentation-container {
+    width: 40%;
+  }
+
+  .container-hero-image.hero-image {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    padding: 4rem 4.5rem;
+    justify-content: space-around;
+  }
+
+  .container-hero-image.hero-image .presentation-container {
+    position: static;
+    padding: 0;
+  }
+
+  .container-hero-image.hero-image .blur-1 {
+    filter: blur(0px);
+    width: 50%;
+    height: auto;
+  }
+  .container-hero-image.hero-image
+    .presentation-container
+    .presentation-content {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-hero-image.hero-image {
+    padding: 0 8rem;
+    justify-content: space-around;
+  }
+
+  .container-hero-image.hero-image .presentation-container {
+    position: static;
+    padding: 0;
+  }
+
+  .container-hero-image.hero-image .blur-1 {
+    filter: blur(0px);
+    width: 60%;
+    height: auto;
+  }
+
+  .container-hero-image.hero-image
+    .presentation-container
+    .presentation-content
+    p {
+    font-size: 1.125rem;
+  }
+
+  .container-hero-image.hero-image
+    .presentation-container
+    .presentation-content
+    button {
+    font-size: 1.125rem;
+  }
+}
