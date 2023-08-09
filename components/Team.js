@@ -4,8 +4,6 @@ import {
 } from "react-icons/bs";
 
 import { useEffect } from "react";
-// import { move } from "./script";
-import { Carousel } from "@trendyol-js/react-carousel";
 
 export default function Team() {
   useEffect(() => {

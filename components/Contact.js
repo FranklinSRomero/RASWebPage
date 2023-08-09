@@ -7,7 +7,7 @@ import { MdLocationOn } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import {BsFillArrowLeftCircleFill} from "react-icons/bs"
-import Link from "next/link";
+
 
 export default function Contact() {
   return (
