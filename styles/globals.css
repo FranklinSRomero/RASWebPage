@@ -43,6 +43,14 @@
   box-sizing: border-box;
 }
 
+textarea, select, input, button { 
+  outline: none;
+}
+*:focus { 
+  outline-color: transparent; 
+  outline-style: none;
+}
+
 html {
   font-size: 12px;
   scroll-behavior: smooth;
