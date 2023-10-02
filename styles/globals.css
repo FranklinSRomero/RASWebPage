@@ -47,6 +47,7 @@ textarea, select, input, button {
   outline: none;
 }
 
+
 *:focus { 
   outline-color: transparent; 
   outline-style: none;

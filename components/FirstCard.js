@@ -1,6 +1,16 @@
 import RangeInput from "./RangeInput";
+import { useState } from "react";
+
  
 export default function FirstCard() {
+
+  const [time, setTime] = useState({
+    days: 70,
+    hours: 36,
+    minutes: 23,
+    seconds: 56
+
+  })
 
   return (
     <section className="first-card container-first-card">
@@ -10,11 +20,11 @@ export default function FirstCard() {
         </h2>
         <div className="counter">
           <p>
-            <span className="days"> 70</span>  <b>:</b>  <span className="hours">15</span> <b>:</b> <span className="minutes">35</span>  <b>:</b> <span className="seconds">11</span>  
+            <span className="days"> {time.days} </span>  <b>:</b>  <span className="hours">{time.hours}</span> <b>:</b> <span className="minutes">{time.minutes}</span>  <b>:</b> <span className="seconds">{time.seconds}</span>  
           </p>
         </div>
         <div className="first-card-raiting">
-            <span className="first-card-raiting-title">Audience Award for Best Proyect </span>
+            <span className="first-card-raiting-title">Audience Award for Best Proyect</span>
             <RangeInput/>
            <span className="first-card-raiting-text">Rate the best proyect</span>
         </div>
