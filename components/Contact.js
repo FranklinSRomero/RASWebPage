@@ -7,6 +7,7 @@ import { MdLocationOn } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import {BsFillArrowLeftCircleFill} from "react-icons/bs"
+import Link from "next/link";
 
 
 export default function Contact() {
@@ -61,7 +62,7 @@ export default function Contact() {
           <div className="contact-side-info-networks">
             <FaFacebookF />
             <FaTwitter />
-            <FaInstagram />
+            <Link href="https://www.instagram.com/ras_uniandes/" target="_blank"><FaInstagram /></Link>
             <FaYoutube />
           </div>
         </div>
