@@ -3,8 +3,9 @@ import { BsTelephoneFill, BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { PiOfficeChairFill } from "react-icons/pi";
-import Link from "next/link";
 import {useState} from "react"
+import {BsFillArrowLeftCircleFill} from "react-icons/bs"
+import Link from "next/link";
 
 
 export default function Contact() {
@@ -133,7 +134,8 @@ export default function Contact() {
             <Link href="https://github.com/RASuniandes/" target="_blank" ><FaGithub /></Link>
             <Link href="https://www.linkedin.com/company/rasuniandes" target="_blank" ><FaLinkedinIn /></Link>
             <Link href="https://www.youtube.com/@RasUniandes" target="_blank" ><FaYoutube /></Link>
-          </div>
+  
+        </div>
         </div>
       </div>
     </section>
