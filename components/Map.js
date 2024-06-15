@@ -13,7 +13,6 @@ export default function Map() {
         allowFullScreen="True"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-      
       />
     </section>
   );

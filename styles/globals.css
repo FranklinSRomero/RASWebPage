@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import "scrollbar.css";
+@import "modal.css";
 
 @font-face {
   font-family: "Raleway";
@@ -73,12 +74,32 @@ input:-internal-autofill-selected {
   background-color: var(--main-raven);
 }
 
+input:focus {
+  background-color: transparent !important;
+}
+
+/* Para la mayoría de los navegadores */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--logo-medium) !important; /* Cambia el color del texto si es necesario */
+}
+
+/* Para Firefox */
+input:-moz-autofill,
+input:-moz-autofill:hover, 
+input:-moz-autofill:focus, 
+input:-moz-autofill:active {
+  background-color: transparent !important;
+}
+
+
 img {
   user-select: none;
 
 }
-
-
 
 /*  TABLET SCREEN  */
 

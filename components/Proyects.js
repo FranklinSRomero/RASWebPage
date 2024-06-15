@@ -1,7 +1,4 @@
-import {
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
-} from "react-icons/bs";
+import Link from "next/link";
 
 export default function Proyects() {
   return (
@@ -10,11 +7,6 @@ export default function Proyects() {
         KNOW
         <b> OUR PROYECTS</b>
       </h2>
-      {/* 
-      <BsFillArrowLeftCircleFill
-        className="proyects-container-slider-back proyects-container-slider-arrow "
-        id="slider-button-left"
-      /> */} 
 
       <div className="proyects-container-slider" id="proyects-container-slider">
         <div className="proyects-items-container">
@@ -57,10 +49,6 @@ export default function Proyects() {
         </div>
       </div>
 
-      {/* <BsFillArrowRightCircleFill
-        className="proyects-container-slider-next proyects-container-slider-arrow"
-        id="slider-button-right"
-      /> */}
     </section>
   );
 }
