@@ -4,118 +4,16 @@ import { translateForm } from "./js/funcional_login";
 import { useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { useRouter } from 'next/router';
 
 export default function AuthUser() {
-
-  const router = useRouter();
-
   const [modalLogin, setModalLogin] = useState({
     status: "FAILED",
     color: "var(--main-carmine)",
-    text: "Please try later.",
+    text: "Sign-up failed. Please try again.",
     show: false,
-    position: "absolute",
   });
 
-  const submitForm = async (e) => {
-    e.preventDefault();
-
-    let formData = {
-      successMessage: "Successfuly.",
-      failedMessage: "Please try later.",
-    };
-
-    const $signUp = document.getElementById("sign-up-form"),
-      $signIn = document.getElementById("sign-in-form"),
-      $signUpButtonForm = document.getElementById("signUpButtonForm"),
-      $signInButtonForm = document.getElementById("signInButtonForm");
-
-    document.addEventListener("click", async (e) => {
-      if (e.target == $signInButtonForm) {
-        formData = {
-          email: $signIn.userEmail.value,
-          password: $signIn.userPassword.value,
-          route: '/api/login',
-          successMessage: "Sign-In successfuly.",
-          failedMessage: "Sign-In failed. Please try again.",
-        };
-      } else if (e.target == $signUpButtonForm) {
-        formData = {
-          name: $signUp.userName.value,
-          email: $signUp.userEmail.value,
-          password: $signUp.userPassword.value,
-          passwordConfirm: $signUp.passwordConfirm.value,
-          route: '/api/register',
-          successMessage: "Sign-Up successfuly.",
-          failedMessage: "Sign-Up failed. Please try again.",
-        };
-      }
-
-      if (e.target == $signInButtonForm || e.target == $signUpButtonForm) {
-        try {
-          const response = await fetch(formData.route, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          });
-
-          if (response.ok) {
-            setModalLogin({
-              status: "SUCCESS",
-              color: "var(--logo-star)",
-              text: formData.successMessage,
-              show: true,
-              position: "absolute",
-            });
-            setTimeout(() => {
-              router.push('/users');
-            }, 3000);
-          } else {
-            setModalLogin({
-              status: "FAILED",
-              color: "var(--main-carmine)",
-              text: formData.failedMessage,
-              show: true,
-              position: "absolute",
-            });
-          }
-          setTimeout(() => {
-            setModalLogin({
-              status: "FAILED",
-              color: "var(--main-carmine)",
-              text: "Please try later.",
-              show: false,
-              position: "absolute",
-            });
-          }, 3000);
-
-        } catch (error) {
-          console.error("Error al enviar el formulario", error);
-
-          setModalLogin({
-            status: "FAILED",
-            color: "var(--main-carmine)",
-            text: formData.failedMessage,
-            show: true,
-            position: "absolute",
-          });
-
-          setTimeout(() => {
-            setModalLogin({
-              status: "FAILED",
-              color: "var(--main-carmine)",
-              text: "Please try later.",
-              show: false,
-              position: "absolute",
-            });
-          }, 3000);
-        }
-      }
-    });
-  };
+  function submitForm() {}
 
   return (
     <>
@@ -124,7 +22,7 @@ export default function AuthUser() {
       </Head>
       <div className="container-authuser bg-raven" id="container-authuser">
         <div className="form-container sign-up-container">
-          <form onSubmit={submitForm} className="bg-raven" id="sign-up-form">
+          <form action="#" className="bg-raven">
             <div className="inputs-container">
               <h1>Create Account</h1>
               <span>Let's sign you up quickly</span>
@@ -157,7 +55,7 @@ export default function AuthUser() {
                 className="bg-raven"
               />
               <div>
-                <button onClick={submitForm} id="signUpButtonForm">Sign Up</button>
+                <button onClick={submitForm}>Sign Up</button>
               </div>
               <div className="change-form-movile">
                 <p>
@@ -169,19 +67,19 @@ export default function AuthUser() {
               </div>
             </div>
           </form>
-          <ConnectionState modalPosition="absolute" />
+          <ConnectionState modalPosition="absolute"/>
           <ModalNotification notification={modalLogin} />
         </div>
 
         <div className="form-container sign-in-container">
-          <form className="bg-raven" id="sign-in-form">
+          <form action="#" className="bg-raven">
             <div className="inputs-container">
               <h1>Sign In</h1>
-              <span>Let's log you in quickly</span>
+              <span>Let’s log you in quickly</span>
 
               <input
                 type="email"
-                name="userEmail"
+                name="userEmail-login"
                 placeholder="Type your email"
                 id="userEmail-login"
                 className="bg-raven"
@@ -194,11 +92,11 @@ export default function AuthUser() {
                 className="bg-raven"
               />
               <div>
-                <button id="signInButtonForm" onClick={submitForm}>Login</button>
+                <button>Login</button>
               </div>
               <div className="change-form-movile">
                 <p>
-                  don't have an account?{" "}
+                  don’t have an account?{" "}
                   <span onClick={translateForm} id="SingUpMovile">
                     sign-up
                   </span>
@@ -209,7 +107,7 @@ export default function AuthUser() {
             </div>
           </form>
           <ModalNotification notification={modalLogin} />
-          <ConnectionState modalPosition="absolute" />
+          <ConnectionState modalPosition="absolute"/>
         </div>
 
         <div className="overlay-container">

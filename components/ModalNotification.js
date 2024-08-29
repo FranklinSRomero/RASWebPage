@@ -11,5 +11,6 @@ export default function ModalNotification({notification}) {
             <img src="./notification.svg" alt="notificacion" style={{ height: "2.5rem", width:"2.5rem"}}/>   
         </div>
     </div>
+   
   )
 }

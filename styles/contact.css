@@ -73,7 +73,7 @@
 .contact.contact-container
   input[type="checkbox"]:checked
   ~ .contact-info-container {
-  transform: translateX(0px); 
+  transform: translateX(0px);
 }
 
 .contact.contact-container input[type="checkbox"]:checked ~ label > * {
@@ -158,13 +158,6 @@
 .contact.contact-container .contact-form-container form textarea:focus {
   outline: none;
   border-bottom: 1px solid var(--logo-star);
-  background-color: transparent; 
-}
-
-.contact.contact-container .contact-form-container form input:valid,
-.contact.contact-container .contact-form-container form textarea:valid {
-  background-color: transparent;
-  outline: none;
 }
 
 .contact.contact-container .contact-form-container form button {
@@ -186,21 +179,6 @@
   transform: scale(0.95);
 }
 
-.contact.contact-container .contact-form-container form button.disabled {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
-
-.contact.contact-container .contact-form-container form button.disabled:hover {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
-
-.contact.contact-container .contact-form-container form button.disabled:active {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
-
 .contact.contact-container .contact-form-container {
   width: 100%;
 }
@@ -212,13 +190,6 @@
   font-size: 1rem;
   margin-right: 1rem;
 }
-
-.contact.contact-container
-    .contact-side-info
-    .contact-side-info-networks
-    > * {
-    color: var(--logo-dark);
-  }
 
 @media screen and (min-width: 1280px) {
   .contact.contact-container .contact-box {

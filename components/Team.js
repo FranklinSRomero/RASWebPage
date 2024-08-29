@@ -1,4 +1,8 @@
-import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
+
 import { useEffect } from "react";
 
 export default function Team() {
@@ -8,8 +12,19 @@ export default function Team() {
       prev = document.getElementById("slider-button-left"),
       next = document.getElementById("slider-button-right");
 
-    next.addEventListener("click", () => slider.scrollLeft += slider.offsetWidth);
-    prev.addEventListener("click", () => slider.scrollLeft -= slider.offsetWidth);
+
+    next.addEventListener("click", () => {
+
+      
+      slider.scrollLeft += slider.offsetWidth;
+    });
+
+    prev.addEventListener("click", () => {
+      
+      slider.scrollLeft -= slider.offsetWidth ;
+    });
+
+    
 
   }, []);
 
@@ -23,6 +38,7 @@ export default function Team() {
       <BsFillArrowLeftCircleFill
         className="team-container-slider-back team-container-slider-arrow "
         id="slider-button-left"
+        // onClick={() => move(1)}
       />
 
       {/* Contenedor carrusel */}
@@ -32,6 +48,7 @@ export default function Team() {
           className="team-container-slider-motion"
           id="team-container-slider-motion"
         >
+          
           <div className="team-container-card">
             <div className="team-container-card-img">
               <img src="./yesid.jpg" alt="" />
@@ -87,7 +104,9 @@ export default function Team() {
             </div>
             <h5>Gerónimo Marín</h5>
             <h6>Miembro Minisumo</h6>
-          </div> 
+          </div>
+      
+          
         </div>
       </div>
 

@@ -9,7 +9,7 @@ export default function Foot() {
           <div className="footer-item"><Link href="./" scroll={false}>Home</Link></div>
           <div className="footer-item"><Link href="./#about" scroll={false}>About</Link></div>
           <div className="footer-item"><Link href="./#events" scroll={false}>Events</Link></div>
-          <div className="footer-item"><Link href="./#ourteam" scroll={false}>Team</Link></div>
+          <div className="footer-item"><Link href="./#Team" scroll={false}>Team</Link></div>
           <div className="footer-item"><Link href="./authuser">Login</Link></div>
         </div>
         <div className="footer-items-section">
@@ -41,7 +41,7 @@ export default function Foot() {
         </div>
         
       </div>
-      <p className="copyright"> © {new Date().getFullYear()} Copyright by RAS uniandes - All Rights Reserved </p>
+      <p className="copyright"> © 2022 Copyright by RAS uniandes - All Rights Reserved </p>
       <div className="makers made-by">
         <p>Made by Cristihan Meza and Brayan Joya</p> 
       </div>

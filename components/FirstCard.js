@@ -1,22 +1,32 @@
 import RangeInput from "./RangeInput";
-import CountdownTimer from "./CountdownTimer";
+import { useState } from "react";
 
  
 export default function FirstCard() {
+
+  const [time, setTime] = useState({
+    days: 70,
+    hours: 36,
+    minutes: 23,
+    seconds: 56
+
+  })
 
   return (
     <section className="first-card container-first-card">
       <div className="first-card-cronometer first-card-item" >
         <h2>
-          time remainig for <span className="first-card-cronometer-title">New Year</span>
+          time remainig for <span className="first-card-cronometer-title">runibot</span>
         </h2>
         <div className="counter">
-          <CountdownTimer targetDate="2024-2-3" />
+          <p>
+            <span className="days"> {time.days} </span>  <b>:</b>  <span className="hours">{time.hours}</span> <b>:</b> <span className="minutes">{time.minutes}</span>  <b>:</b> <span className="seconds">{time.seconds}</span>  
+          </p>
         </div>
         <div className="first-card-raiting">
-            <span className="first-card-raiting-title">Audience Award for own Chapter</span>
+            <span className="first-card-raiting-title">Audience Award for Best Proyect</span>
             <RangeInput/>
-           <span className="first-card-raiting-text">Rate the Chapter</span>
+           <span className="first-card-raiting-text">Rate the best proyect</span>
         </div>
       </div>
       <div className="first-card-item first-card-rate-bars">

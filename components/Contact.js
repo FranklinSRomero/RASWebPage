@@ -1,68 +1,15 @@
-import { FaLinkedinIn, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
-import { BsTelephoneFill, BsFillArrowLeftCircleFill } from "react-icons/bs";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
 import { MdLocationOn } from "react-icons/md";
+import { BsTelephoneFill } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
-import { PiOfficeChairFill } from "react-icons/pi";
-import Link from "next/link";
-import {useState} from "react"
+import {BsFillArrowLeftCircleFill} from "react-icons/bs"
 
 
 export default function Contact() {
-
-  const [showModal, setShowModal] = useState(false);
-  const [disableButton, setDisableButton] = useState(false);
-
-    // Función para cerrar el modal
-  const closeModal = () => {
-    setShowModal(false);
-  }
-
-  const [showSending, setShowSending] = useState(false);
-
-    // Función para cerrar el modal
-  const closeSending = () => {
-    setShowSending(false);
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    setDisableButton(true);
-    setShowSending(true)
-  
-    const formData = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value
-    };
-  
-    try {
-      const response = await fetch('/api/sendMail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
-      if (response.ok) { 
-        setShowSending(false);
-        setShowModal(true);
-        // Restablecer formulario, manejar lógica adicional si es necesario
-      } else {
-        // Manejar errores
-        setShowSending(false);
-        console.error('Error al enviar el formulario');
-      }
-    } catch (error) {
-      console.error('Error al enviar el formulario', error);
-    }
-
-   
-    setDisableButton(false);
-    
-  };
-
   return (
     <section className="contact contact-container">
       <div className="contact-box">
@@ -75,35 +22,19 @@ export default function Contact() {
             
           </div>
         </div>
-        <div className={`modal ${showModal ? 'show' : ''} sending`}>
-          <div className="modal-container sended">
-            Mensaje enviado con éxito!
-            <div className="close-menu">
-              <img src="./x-svgrepo-com.svg" alt="" onClick={closeModal} />
-            </div>
-          </div>
-        </div>
-        <div className={`modal ${showSending ? 'show' : ''} sended`}>
-          <div className="modal-container">
-            Enviando Mensaje...
-            <div className="close-menu">
-              <img src="./x-svgrepo-com.svg" alt="" onClick={closeSending} />
-            </div>
-          </div>
-        </div>
         <div className="contact-form-container">
-          <form  onSubmit={handleSubmit} className="contact-form" id="contact">
+          <form action="#" className="contact-form"  id="contact">
             <h2> Contact Us</h2>
             <p>
               Feel Free to contact us any time. We will get bact to you as soon
               as we can!
             </p>
-            <input type="text" placeholder="Name " id="Name" name="name" required/>
-            <input type="email" placeholder="Email" id="Email" name="email" required/>
-            <textarea name="message" id="Message" cols="10" rows="1" placeholder="Message" required>
+            <input type="text" placeholder="Name " />
+            <input type="email" placeholder="Email" />
+            <textarea name="" id="" cols="10" rows="1" placeholder="Message">
               
             </textarea>
-            <button id="contact_button" disabled={disableButton} className={disableButton?"disabled":"enabled"}>SEND</button>
+            <button>SEND</button>
           </form>
         </div>
         <input type="checkbox" name="activateInfo" id="activate-info"  />
@@ -112,27 +43,26 @@ export default function Contact() {
           <h3>Info</h3>
           <div className="square"></div>
           <div className="contact-info-item">
-            <HiOutlineMail className="icon-info-item" /> ras@uniandes.edu.co
+            <HiOutlineMail className="icon-info-item" /> rasuniandes@gmail.com
           </div>
           <div className="contact-info-item">
             <BsTelephoneFill className="icon-info-item" /> 
-            +57 3208145302
+            +57321894567
           </div>
           <div className="contact-info-item">
             <MdLocationOn className="icon-info-item" />
-            Cra 1 E #19a-70, Bogotá
+            calle 19 #jdjndnd
           </div>
           <div className="contact-info-item">
-            <PiOfficeChairFill className="icon-info-item"/> Mario Laserna, ML-016 
+            <TbWorld className="icon-info-item" /> rasuniandes.com
           </div>
         </div>
         <div className="contact-side-info">
-          <div className="contact-side-info-networks">   
-            
-            <Link href="https://www.instagram.com/ras_uniandes/" target="_blank" ><FaInstagram /></Link>
-            <Link href="https://github.com/RASuniandes/" target="_blank" ><FaGithub /></Link>
-            <Link href="https://www.linkedin.com/company/rasuniandes" target="_blank" ><FaLinkedinIn /></Link>
-            <Link href="https://www.youtube.com/@RasUniandes" target="_blank" ><FaYoutube /></Link>
+          <div className="contact-side-info-networks">
+            <FaFacebookF />
+            <FaTwitter />
+            <FaInstagram />
+            <FaYoutube />
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
-import { FaLinkedinIn, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
-import Link from "next/link";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -24,10 +26,13 @@ export default function About() {
           profesionales.
         </p>
         <div className="about-social-network">
-            <Link href="https://www.instagram.com/ras_uniandes/" target="_blank" ><FaInstagram className="about-social-network-item" /></Link>
-            <Link href="https://github.com/RASuniandes/" target="_blank" ><FaGithub className="about-social-network-item" /></Link>
-            <Link href="https://www.linkedin.com/company/rasuniandes" target="_blank" ><FaLinkedinIn className="about-social-network-item" /></Link>
-            <Link href="https://www.youtube.com/@RasUniandes" target="_blank" ><FaYoutube className="about-social-network-item" /></Link>
+          <FaFacebookF className="about-social-network-item" />
+
+          <FaTwitter className="about-social-network-item" />
+
+          <FaInstagram className="about-social-network-item" />
+
+          <FaYoutube className="about-social-network-item" />
         </div>
       </div>
     </section>

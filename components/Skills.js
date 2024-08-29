@@ -15,7 +15,8 @@ export default function Skills() {
             <div className="skill-item">
                 <img src="./circuit.svg" alt="" />
                 <h4>PCB design</h4>
-                <p>A través de nuestra pasión por la tecnología de precisión, lideramos el futuro de la electrónica con diseños de PCB innovadores y creativos.</p>
+                <p>
+A través de nuestra pasión por la tecnología de precisión, lideramos el futuro de la electrónica con diseños de PCB innovadores y creativos.</p>
             </div>
         </div>
     </section>
